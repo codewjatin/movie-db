@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Base from '../components/Base';
 import Extras from '../components/Extras';
 import SearchBar from '../components/SearchBar';
+import { AiFillHeart } from 'react-icons/ai';
 
 export default function Home() {
   const [movieData, setMovieData] = useState({});
@@ -18,6 +19,14 @@ export default function Home() {
       <Head>
         <title>Movie Database</title>
       </Head>
+      <Text
+        pos="absolute"
+        top="1rem"
+        left="1.5rem"
+        fontWeight="semibold"
+        fontSize="lg">
+        Movie Database
+      </Text>
       <Center minH="100vh" w="max">
         <Box
           shadow="lg"
@@ -43,6 +52,16 @@ export default function Home() {
           )}
         </Box>
       </Center>
+      <Text
+        pos="absolute"
+        bottom="1rem"
+        right="1.5rem"
+        fontWeight="semibold"
+        fontSize="lg">
+        <Center gap=".25rem">
+          Made with <AiFillHeart fill="#FE251B" /> by Jatin Kumar.
+        </Center>
+      </Text>
     </Container>
   );
 }
